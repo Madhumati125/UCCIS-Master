@@ -1,0 +1,13 @@
+{
+  "success": false,
+  "error": {
+    "type": "PAYLOAD_VALIDATION_FAILURE",
+    "message": "MISSING_TRACE_ID",
+    "severity": "HIGH",
+    "source": "INGESTION",
+    "trace_id": "TRACE_MISSING",
+    "timestamp": "2026-05-08T09:08:43.788Z",
+    "replay_visible": true,
+    "audit_required": true
+  }
+}

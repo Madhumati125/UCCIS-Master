@@ -1,0 +1,16 @@
+{
+  "signal_id": "SIG-776a12a6-7178-49ec-b78c-082fc1fb1714",
+  "source_type": "FLOODING",
+  "zone": "Kurla",
+  "metrics": {
+    "flood_level": 78,
+    "drainage_capacity": 40,
+    "water_logging_points": 12,
+    "rainfall_intensity": 91
+  },
+  "severity": "CRITICAL",
+  "timestamp": "2026-05-08T10:39:19.098Z",
+  "stale": false,
+  "replay_safe_id": "RPL-776a12a6-7178-49ec-b78c-082fc1fb1714",
+  "trace_id": "TRACE-c92b2d40-9618-400b-a3fa-d569bb5325a2"
+}

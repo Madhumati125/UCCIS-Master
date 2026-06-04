@@ -1,0 +1,44 @@
+{
+  "trace_id": "TRACE-TANTRA-001",
+  "snapshot_time": "2026-05-08T10:46:14.894Z",
+  "state": [
+    {
+      "trace_id": "TRACE-TANTRA-001",
+      "stage": "SIGNAL",
+      "status": "SIGNAL_CAPTURED",
+      "zone": "South Mumbai",
+      "domain": "FLOODING",
+      "metrics": {
+        "flood_level": 91,
+        "congestion": 83
+      },
+      "timestamp": "2026-05-08T10:46:14.894Z"
+    },
+    {
+      "trace_id": "TRACE-TANTRA-001",
+      "stage": "INTELLIGENCE",
+      "intelligence_score": 80,
+      "escalation": "CRITICAL",
+      "timestamp": "2026-05-08T10:46:14.894Z"
+    },
+    {
+      "trace_id": "TRACE-TANTRA-001",
+      "stage": "GOVERNANCE",
+      "governance_state": "APPROVED",
+      "governance_priority": 80,
+      "timestamp": "2026-05-08T10:46:14.894Z"
+    },
+    {
+      "trace_id": "TRACE-TANTRA-001",
+      "stage": "ENFORCEMENT",
+      "enforcement_action": "FIELD_RESPONSE_DEPLOYED",
+      "timestamp": "2026-05-08T10:46:14.894Z"
+    },
+    {
+      "trace_id": "TRACE-TANTRA-001",
+      "stage": "RESOLUTION",
+      "resolution_status": "STABILIZED",
+      "timestamp": "2026-05-08T10:46:14.894Z"
+    }
+  ]
+}

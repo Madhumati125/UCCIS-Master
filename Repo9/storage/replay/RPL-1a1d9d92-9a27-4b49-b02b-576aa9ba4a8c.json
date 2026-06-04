@@ -1,0 +1,14 @@
+{
+  "signal_id": "SIG-1a1d9d92-9a27-4b49-b02b-576aa9ba4a8c",
+  "source_type": "WASTE_OVERLOAD",
+  "zone": "Chembur",
+  "metrics": {
+    "garbage_load": 92,
+    "overflow_points": 17
+  },
+  "severity": "HIGH",
+  "timestamp": "2026-05-08T10:55:32.623Z",
+  "stale": false,
+  "replay_safe_id": "RPL-1a1d9d92-9a27-4b49-b02b-576aa9ba4a8c",
+  "trace_id": "TRACE-f8892e4b-1945-4d97-b691-2570d3124245"
+}

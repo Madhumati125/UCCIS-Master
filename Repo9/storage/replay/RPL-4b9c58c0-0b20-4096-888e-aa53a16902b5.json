@@ -1,0 +1,14 @@
+{
+  "signal_id": "SIG-4b9c58c0-0b20-4096-888e-aa53a16902b5",
+  "source_type": "CIVIC_COMPLAINTS",
+  "zone": "Dadar",
+  "metrics": {
+    "complaints": 212,
+    "escalation_rate": 61
+  },
+  "severity": "HIGH",
+  "timestamp": "2026-05-08T07:29:22.168Z",
+  "stale": false,
+  "replay_safe_id": "RPL-4b9c58c0-0b20-4096-888e-aa53a16902b5",
+  "trace_id": "TRACE-e0d538ad-75b0-4875-bc37-f699bdcf2e0b"
+}

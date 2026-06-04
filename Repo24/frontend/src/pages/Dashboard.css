@@ -1,0 +1,271 @@
+/* =========================
+   BASE RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: black;
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+
+.uccis-app {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  border-right: 1px solid #1f2937;
+  padding: 14px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #38bdf8;
+}
+
+.nav {
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #cbd5e1;
+  transition: 0.2s ease;
+}
+
+.nav:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+
+.main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+/* =========================
+   GRID (CRITICAL FIX)
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* =========================
+   CARD (MOST IMPORTANT FIX)
+========================= */
+
+.card {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 14px;
+
+  /* 🔥 CRITICAL FIX FOR CHARTS */
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* CARD TITLE */
+.card h3 {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   CHART FIX (RECHARTS MUST HAVE THIS)
+========================= */
+
+.recharts-responsive-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.recharts-surface {
+  overflow: visible !important;
+}
+
+/* =========================
+   TELEMETRY MODULE FIX
+========================= */
+
+.telemetry-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* =========================
+   KPI CARDS
+========================= */
+
+.telemetry-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.telemetry-kpi-card {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.telemetry-kpi-title {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.telemetry-kpi-value {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #38bdf8;
+}
+
+/* =========================
+   TELEMETRY CHART BOX
+========================= */
+
+.telemetry-chart-box {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 12px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   INSIGHTS PANEL
+========================= */
+
+.telemetry-insights {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.telemetry-insights h3 {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.telemetry-insights ul {
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.telemetry-insights li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #1f2937;
+}
+
+.telemetry-insights li:last-child {
+  border-bottom: none;
+}
+
+/* STATUS COLORS */
+
+.ok {
+  color: #22c55e;
+}
+
+.warn {
+  color: #f59e0b;
+}
+
+.bad {
+  color: #ef4444;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .uccis-app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .telemetry-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 280px;
+  }
+}

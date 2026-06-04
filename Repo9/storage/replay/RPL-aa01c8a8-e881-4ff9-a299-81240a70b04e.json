@@ -1,0 +1,14 @@
+{
+  "signal_id": "SIG-aa01c8a8-e881-4ff9-a299-81240a70b04e",
+  "source_type": "TRAFFIC",
+  "zone": "Bandra",
+  "metrics": {
+    "congestion": 88,
+    "avg_speed": 12
+  },
+  "severity": "HIGH",
+  "timestamp": "2026-05-08T10:39:19.098Z",
+  "stale": false,
+  "replay_safe_id": "RPL-aa01c8a8-e881-4ff9-a299-81240a70b04e",
+  "trace_id": "TRACE-ae757ca5-d301-4714-886f-3de375a73675"
+}

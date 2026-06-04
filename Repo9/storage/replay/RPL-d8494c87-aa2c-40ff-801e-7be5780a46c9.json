@@ -1,0 +1,15 @@
+{
+  "signal_id": "SIG-d8494c87-aa2c-40ff-801e-7be5780a46c9",
+  "source_type": "WEATHER",
+  "zone": "South Mumbai",
+  "metrics": {
+    "rainfall": 82,
+    "humidity": 90,
+    "temperature": 29
+  },
+  "severity": "HIGH",
+  "timestamp": "2026-05-08T10:55:32.623Z",
+  "stale": false,
+  "replay_safe_id": "RPL-d8494c87-aa2c-40ff-801e-7be5780a46c9",
+  "trace_id": "TRACE-35455aa3-c9d9-4f4d-bcb1-05ccd0f5198e"
+}

@@ -1,0 +1,14 @@
+{
+  "signal_id": "SIG-bb5d0d1c-3d85-452b-8023-2dfd7256c819",
+  "source_type": "WATER_SUPPLY",
+  "zone": "Andheri",
+  "metrics": {
+    "reservoir_level": 45,
+    "pressure_drop": 31
+  },
+  "severity": "MODERATE",
+  "timestamp": "2026-05-08T10:55:32.638Z",
+  "stale": false,
+  "replay_safe_id": "RPL-bb5d0d1c-3d85-452b-8023-2dfd7256c819",
+  "trace_id": "TRACE-8829f559-1965-4094-813a-fe2e92216979"
+}

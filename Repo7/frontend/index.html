@@ -1,0 +1,133 @@
+<!-- frontend/index.html -->
+
+<!doctype html>
+
+<html>
+  <head>
+    <title>UCCIS Urban Intelligence Command Center</title>
+
+    <!-- ===================================== -->
+    <!-- CSS -->
+    <!-- ===================================== -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ===================================== -->
+    <!-- LEAFLET MAP -->
+    <!-- ===================================== -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- ===================================== -->
+    <!-- CHART JS -->
+    <!-- ===================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- ===================================== -->
+    <!-- HEADER -->
+    <!-- ===================================== -->
+
+    <div class="header">
+      <h1>UCCIS — Urban Intelligence Command Center</h1>
+
+      <button onclick="runSystem()">Run Intelligence</button>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- DASHBOARD -->
+    <!-- ===================================== -->
+
+    <div class="dashboard">
+      <!-- ===================================== -->
+      <!-- LIVE MAP -->
+      <!-- ===================================== -->
+
+      <div class="card mapCard">
+        <h2>Live City Risk Map</h2>
+
+        <div id="map"></div>
+      </div>
+
+      <!-- ===================================== -->
+      <!-- LINE CHART -->
+      <!-- ===================================== -->
+
+      <div class="card">
+        <h2>Temporal Risk Timeline</h2>
+
+        <canvas id="riskChart"></canvas>
+      </div>
+
+      <!-- ===================================== -->
+      <!-- BAR CHART -->
+      <!-- ===================================== -->
+
+      <div class="card">
+        <h2>Domain Influence Chart</h2>
+
+        <canvas id="domainChart"></canvas>
+      </div>
+
+      <!-- ===================================== -->
+      <!-- PIE + DONUT ROW -->
+      <!-- ===================================== -->
+
+      <div class="chartRow">
+        <!-- ===================================== -->
+        <!-- PIE CHART -->
+        <!-- ===================================== -->
+
+        <div class="card smallChartCard">
+          <h2>Governance Lifecycle</h2>
+
+          <div class="smallChartContainer">
+            <canvas id="governanceChart"></canvas>
+          </div>
+        </div>
+
+        <!-- ===================================== -->
+        <!-- DONUT CHART -->
+        <!-- ===================================== -->
+
+        <div class="card smallChartCard">
+          <h2>Confidence Engine</h2>
+
+          <div class="smallChartContainer">
+            <canvas id="confidenceChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================================== -->
+      <!-- LIVE EVENTS -->
+      <!-- ===================================== -->
+
+      <div class="card full">
+        <h2>Live Event Stream</h2>
+
+        <div id="events"></div>
+      </div>
+
+      <!-- ===================================== -->
+      <!-- RAW JSON -->
+      <!-- ===================================== -->
+
+      <div class="card full">
+        <h2>Intelligence Output</h2>
+
+        <pre id="output"></pre>
+      </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- SCRIPT -->
+    <!-- ===================================== -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "trace_id": "TRACE-FLOOD-001",
+  "snapshot_timestamp": "2026-05-08T08:38:49.327Z",
+  "state": {
+    "timeline": [
+      {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "SIGNAL",
+        "state": "DETECTED",
+        "timestamp": "2026-05-08T10:00:00Z",
+        "data": {
+          "flood_level": 88
+        }
+      },
+      {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "INTELLIGENCE",
+        "state": "ANALYZED",
+        "timestamp": "2026-05-08T10:02:00Z",
+        "data": {
+          "escalation": "CRITICAL"
+        }
+      },
+      {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "GOVERNANCE",
+        "state": "APPROVED",
+        "timestamp": "2026-05-08T10:05:00Z"
+      },
+      {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "EXECUTION",
+        "state": "DRAINAGE_DEPLOYED",
+        "timestamp": "2026-05-08T10:08:00Z"
+      },
+      {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "RESOLUTION",
+        "state": "STABILIZED",
+        "timestamp": "2026-05-08T10:20:00Z"
+      }
+    ],
+    "replay": {
+      "signal": {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "SIGNAL",
+        "state": "DETECTED",
+        "timestamp": "2026-05-08T10:00:00Z",
+        "data": {
+          "flood_level": 88
+        }
+      },
+      "intelligence": {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "INTELLIGENCE",
+        "state": "ANALYZED",
+        "timestamp": "2026-05-08T10:02:00Z",
+        "data": {
+          "escalation": "CRITICAL"
+        }
+      },
+      "governance": {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "GOVERNANCE",
+        "state": "APPROVED",
+        "timestamp": "2026-05-08T10:05:00Z"
+      },
+      "execution": {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "EXECUTION",
+        "state": "DRAINAGE_DEPLOYED",
+        "timestamp": "2026-05-08T10:08:00Z"
+      },
+      "resolution": {
+        "trace_id": "TRACE-FLOOD-001",
+        "stage": "RESOLUTION",
+        "state": "STABILIZED",
+        "timestamp": "2026-05-08T10:20:00Z"
+      }
+    },
+    "visualization": [
+      {
+        "stage": "SIGNAL",
+        "state": "DETECTED",
+        "timestamp": "2026-05-08T10:00:00Z"
+      },
+      {
+        "stage": "INTELLIGENCE",
+        "state": "ANALYZED",
+        "timestamp": "2026-05-08T10:02:00Z"
+      },
+      {
+        "stage": "GOVERNANCE",
+        "state": "APPROVED",
+        "timestamp": "2026-05-08T10:05:00Z"
+      },
+      {
+        "stage": "EXECUTION",
+        "state": "DRAINAGE_DEPLOYED",
+        "timestamp": "2026-05-08T10:08:00Z"
+      },
+      {
+        "stage": "RESOLUTION",
+        "state": "STABILIZED",
+        "timestamp": "2026-05-08T10:20:00Z"
+      }
+    ]
+  }
+}

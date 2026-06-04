@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>UCCIS Command Interface</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>UCCIS Command Interface</h1>
+
+    <!-- 🔷 MAIN GRID LAYOUT -->
+    <div class="main-container">
+      <!-- 🟢 LEFT: ZONES -->
+      <div class="panel zones-panel">
+        <h2>Zones</h2>
+        <div id="zones"></div>
+      </div>
+
+      <!-- 🟡 CENTER: ALERTS -->
+      <div class="panel alerts-panel">
+        <h2>Live Alerts</h2>
+        <div id="alerts"></div>
+      </div>
+
+      <!-- 🔴 RIGHT: CONTROL PANEL -->
+      <div class="panel control-panel">
+        <h2>Command Panel</h2>
+
+        <div id="actions">
+          <button onclick="triggerAction(1, 'deploy_waste_collection')">
+            Deploy Waste
+          </button>
+
+          <button onclick="triggerAction(2, 'reroute_water')">
+            Reroute Water
+          </button>
+
+          <button onclick="triggerAction(3, 'send_field_team')">
+            Send Field Team
+          </button>
+        </div>
+
+        <h3>System Recommendations</h3>
+        <div id="recommendations"></div>
+      </div>
+    </div>
+
+    <!-- FOOTER STATUS -->
+    <div class="footer">
+      <p>System Status: Active | UCCIS Live Monitoring</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

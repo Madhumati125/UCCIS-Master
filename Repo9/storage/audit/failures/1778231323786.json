@@ -1,0 +1,13 @@
+{
+  "success": false,
+  "error": {
+    "type": "DUPLICATE_SIGNAL",
+    "message": "SIGNAL_ALREADY_PROCESSED",
+    "severity": "MODERATE",
+    "source": "INGESTION",
+    "trace_id": "TRACE-FLOOD-001",
+    "timestamp": "2026-05-08T09:08:43.785Z",
+    "replay_visible": true,
+    "audit_required": true
+  }
+}

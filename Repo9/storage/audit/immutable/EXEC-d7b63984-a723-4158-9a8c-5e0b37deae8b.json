@@ -1,0 +1,11 @@
+{
+  "execution_id": "EXEC-d7b63984-a723-4158-9a8c-5e0b37deae8b",
+  "trace_id": "TRACE-FLOOD-001",
+  "zone": "South Mumbai",
+  "domain": "FLOODING",
+  "requested_action": "Drainage Emergency Response",
+  "governance_state": "APPROVED",
+  "timestamp": "2026-05-08T08:16:16.848Z",
+  "replay_visible": true,
+  "immutable": true
+}

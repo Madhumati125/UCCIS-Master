@@ -1,0 +1,11 @@
+{
+  "execution_id": "EXEC-66c57d18-586f-4a79-b1de-92c2ff431ea3",
+  "trace_id": "TRACE-TRAFFIC-002",
+  "zone": "Bandra",
+  "domain": "TRAFFIC",
+  "requested_action": "Traffic Diversion",
+  "governance_state": "HOLD",
+  "timestamp": "2026-05-08T09:22:30.386Z",
+  "replay_visible": true,
+  "immutable": true
+}

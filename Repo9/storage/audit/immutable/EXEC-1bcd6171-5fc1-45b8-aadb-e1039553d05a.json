@@ -1,0 +1,11 @@
+{
+  "execution_id": "EXEC-1bcd6171-5fc1-45b8-aadb-e1039553d05a",
+  "trace_id": "TRACE-WATER-003",
+  "zone": "Kalyan",
+  "domain": "WATER_SHORTAGE",
+  "requested_action": "Emergency Tanker Dispatch",
+  "governance_state": "ESCALATED",
+  "timestamp": "2026-05-08T08:16:16.866Z",
+  "replay_visible": true,
+  "immutable": true
+}
