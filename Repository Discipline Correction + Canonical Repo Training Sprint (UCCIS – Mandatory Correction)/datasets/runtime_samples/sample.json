@@ -1,0 +1,67 @@
+[
+    {
+        "module": "backend",
+        "message": "Server started",
+        "level": "INFO"
+    },
+    {
+        "module": "telemetry",
+        "message": "Streaming active",
+        "level": "INFO"
+    },
+    {
+        "module": "database",
+        "message": "Connection established",
+        "level": "INFO"
+    },
+    {
+        "module": "auth",
+        "message": "Login success",
+        "level": "INFO"
+    },
+    {
+        "module": "backend",
+        "message": "High CPU usage detected",
+        "level": "WARN"
+    },
+    {
+        "module": "database",
+        "message": "Slow query detected",
+        "level": "WARN"
+    },
+    {
+        "module": "cache",
+        "message": "Cache miss spike",
+        "level": "WARN"
+    },
+    {
+        "module": "auth",
+        "message": "Invalid login attempt",
+        "level": "ERROR"
+    },
+    {
+        "module": "database",
+        "message": "Connection pool exhausted",
+        "level": "ERROR"
+    },
+    {
+        "module": "gateway",
+        "message": "Request timeout",
+        "level": "ERROR"
+    },
+    {
+        "module": "scheduler",
+        "message": "Job executed",
+        "level": "INFO"
+    },
+    {
+        "module": "telemetry",
+        "message": "Data synced",
+        "level": "INFO"
+    },
+    {
+        "module": "backend",
+        "message": "Cache rebuilt",
+        "level": "INFO"
+    }
+]

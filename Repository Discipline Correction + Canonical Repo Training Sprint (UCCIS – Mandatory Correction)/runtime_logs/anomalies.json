@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "type": "CPU_SPIKE",
+        "severity": "HIGH"
+    },
+    {
+        "id": 2,
+        "type": "MEM_LEAK",
+        "severity": "MEDIUM"
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "timeline": [
+        {
+            "t": 1,
+            "event": "CPU spike"
+        },
+        {
+            "t": 2,
+            "event": "Memory warning"
+        },
+        {
+            "t": 3,
+            "event": "System stable"
+        }
+    ]
+}

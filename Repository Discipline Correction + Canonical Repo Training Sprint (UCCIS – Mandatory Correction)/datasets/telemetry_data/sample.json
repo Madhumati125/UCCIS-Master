@@ -1,0 +1,42 @@
+[
+    {
+        "signalId": "CPU",
+        "value": 72
+    },
+    {
+        "signalId": "MEM",
+        "value": 64
+    },
+    {
+        "signalId": "DISK",
+        "value": 91
+    },
+    {
+        "signalId": "NET-IN",
+        "value": 120
+    },
+    {
+        "signalId": "NET-OUT",
+        "value": 98
+    },
+    {
+        "signalId": "GPU",
+        "value": 55
+    },
+    {
+        "signalId": "TEMP",
+        "value": 88
+    },
+    {
+        "signalId": "FAN",
+        "value": 4100
+    },
+    {
+        "signalId": "CACHE",
+        "value": 67
+    },
+    {
+        "signalId": "THREADS",
+        "value": 82
+    }
+]
