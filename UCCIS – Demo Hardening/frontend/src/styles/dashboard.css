@@ -1,0 +1,427 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar {
+  width: 260px;
+  background: #111827;
+  padding: 20px;
+  border-right: 1px solid #1e293b;
+}
+
+.sidebar h2 {
+  color: #38bdf8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  background: #1e293b;
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #334155;
+  transform: translateX(5px);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.header p {
+  color: #94a3b8;
+}
+
+.refresh-btn {
+  background: #38bdf8;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.refresh-btn:hover {
+  background: #0284c7;
+}
+
+/* ==========================
+   COMMON CARD
+========================== */
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   KPI SECTION
+========================== */
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.kpi-card {
+  text-align: center;
+}
+
+.kpi-card h3 {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.kpi-card h1,
+.kpi-card h2 {
+  color: #22c55e;
+  font-size: 32px;
+}
+
+/* ==========================
+   SYSTEM HEALTH
+========================== */
+
+.health-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.health-card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.health-card h3 {
+  margin-bottom: 10px;
+  color: #94a3b8;
+}
+
+.health-card h1 {
+  font-size: 22px;
+}
+
+.online {
+  border-left: 5px solid #22c55e;
+}
+
+.online h1 {
+  color: #22c55e;
+}
+
+.offline {
+  border-left: 5px solid #ef4444;
+}
+
+.offline h1 {
+  color: #ef4444;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.health-grid div {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.progress-label {
+  width: 180px;
+}
+
+.progress-bar {
+  flex: 1;
+  background: #0f172a;
+  height: 14px;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  height: 14px;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/* ==========================
+   SCENARIO CARDS
+========================== */
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.scenario-card {
+  text-align: center;
+  transition: 0.3s;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+}
+
+.flood {
+  border-left: 5px solid #3b82f6;
+}
+
+.traffic {
+  border-left: 5px solid #f59e0b;
+}
+
+.cyber {
+  border-left: 5px solid #ef4444;
+}
+
+/* ==========================
+   INCIDENT + LOG GRID
+========================== */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.left-panel {
+  width: 100%;
+}
+
+.right-panel {
+  width: 100%;
+}
+
+/* ==========================
+   TABLES
+========================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #0f172a;
+  color: #38bdf8;
+  padding: 12px;
+  border: 1px solid #334155;
+}
+
+table td {
+  padding: 12px;
+  border: 1px solid #334155;
+}
+
+table tr:hover {
+  background: #0f172a;
+}
+
+/* ==========================
+   LOGS
+========================== */
+
+.logs-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.log-item {
+  background: #0f172a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #22c55e;
+}
+
+.log-item strong {
+  display: block;
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.log-item small {
+  color: #94a3b8;
+}
+
+/* ==========================
+   REPLAY PANEL
+========================== */
+
+pre {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  color: #22c55e;
+}
+
+/* ==========================
+   LOADING SCREEN
+========================== */
+
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #0f172a;
+}
+
+.loading-screen h1 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .health-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .scenario-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .health-grid {
+    grid-template-columns: 1fr;
+  }
+}
