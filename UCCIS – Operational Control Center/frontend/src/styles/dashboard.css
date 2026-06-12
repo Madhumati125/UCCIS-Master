@@ -1,0 +1,218 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0b1220;
+  color: white;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 240px;
+  background: #111827;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-right: 1px solid #1f2937;
+}
+
+.sidebar h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.sidebar-item {
+  padding: 10px 12px;
+  background: #1f2937;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.sidebar-item:hover {
+  background: #334155;
+}
+
+.sidebar-item.active {
+  background: #38bdf8;
+  color: #000;
+  font-weight: bold;
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+
+.content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #0b1220;
+}
+
+/* =========================
+   TOP HEADER
+========================= */
+
+.top-header {
+  background: #1f2937;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #334155;
+}
+
+.top-header h1 {
+  font-size: 18px;
+  color: #38bdf8;
+  margin-bottom: 4px;
+}
+
+.top-header p {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* =========================
+   PANEL (CARDS / VIEWS)
+========================= */
+
+.panel {
+  background: #1f2937;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   METRIC CARDS (if used)
+========================= */
+
+.metric-card {
+  background: #1f2937;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #334155;
+}
+
+.metric-card h2 {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+/* =========================
+   LOGS
+========================= */
+
+.log-row {
+  background: #0f172a;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  border-left: 3px solid #38bdf8;
+}
+
+/* =========================
+   JSON DISPLAY
+========================= */
+
+.json-box {
+  background: #0b1220;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 10px;
+  color: #38bdf8;
+  font-size: 12px;
+  border: 1px solid #1f2937;
+}
+
+/* =========================
+   ALERTS (if reused)
+========================= */
+
+.alert {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.danger {
+  background: #7f1d1d;
+}
+
+.warning {
+  background: #78350f;
+}
+
+.success {
+  background: #14532d;
+}
+
+.info {
+  background: #1e3a8a;
+}
+
+/* =========================
+   CHART PANEL FIX
+========================= */
+
+.recharts-wrapper {
+  font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-item {
+    white-space: nowrap;
+  }
+}
