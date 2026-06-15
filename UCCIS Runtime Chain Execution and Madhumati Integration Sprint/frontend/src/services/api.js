@@ -1,0 +1,16 @@
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "http://localhost:5000/api",
+});
+
+export const getDashboard = () =>
+  API.get("/dashboard");
+
+export const getReplay = (traceId) =>
+  API.get(`/replay/${traceId}`);
+
+export const executeSignal = (payload) =>
+  API.post("/execute-signal", payload);
+
+export default API;
