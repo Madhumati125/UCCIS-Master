@@ -1,0 +1,19 @@
+{
+    "levels": [
+        {
+            "level": 1,
+            "team": "Operations Team",
+            "responseTime": "15 Minutes"
+        },
+        {
+            "level": 2,
+            "team": "City Control Room",
+            "responseTime": "30 Minutes"
+        },
+        {
+            "level": 3,
+            "team": "Emergency Management",
+            "responseTime": "60 Minutes"
+        }
+    ]
+}
