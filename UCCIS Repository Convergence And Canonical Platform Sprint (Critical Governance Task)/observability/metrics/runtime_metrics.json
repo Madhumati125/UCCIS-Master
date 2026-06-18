@@ -1,0 +1,12 @@
+{
+    "runtimeMetrics": {
+        "signalExecutions": 120,
+        "telemetryExecutions": 118,
+        "incidentExecutions": 115,
+        "escalationExecutions": 112,
+        "replayExecutions": 109,
+        "evidenceExecutions": 108,
+        "successRate": "98%",
+        "failureRate": "2%"
+    }
+}

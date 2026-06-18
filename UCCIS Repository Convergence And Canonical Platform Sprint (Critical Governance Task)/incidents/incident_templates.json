@@ -1,0 +1,16 @@
+{
+    "templates": [
+        {
+            "id": "INC-001",
+            "title": "Flood Emergency",
+            "priority": "P1",
+            "owner": "Operations Team"
+        },
+        {
+            "id": "INC-002",
+            "title": "Traffic Blockage",
+            "priority": "P2",
+            "owner": "Traffic Team"
+        }
+    ]
+}

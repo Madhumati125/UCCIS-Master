@@ -1,0 +1,35 @@
+{
+    "dashboard": "UCCIS Command Center",
+    "cards": [
+        {
+            "name": "Signals",
+            "value": 12,
+            "status": "ACTIVE"
+        },
+        {
+            "name": "Telemetry",
+            "value": 25,
+            "status": "ACTIVE"
+        },
+        {
+            "name": "Incidents",
+            "value": 10,
+            "status": "ACTIVE"
+        },
+        {
+            "name": "Escalations",
+            "value": 12,
+            "status": "ACTIVE"
+        },
+        {
+            "name": "Replay",
+            "value": 18,
+            "status": "ACTIVE"
+        },
+        {
+            "name": "Evidence",
+            "value": 32,
+            "status": "ACTIVE"
+        }
+    ]
+}

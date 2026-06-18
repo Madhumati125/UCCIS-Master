@@ -1,0 +1,16 @@
+{
+    "flows": [
+        {
+            "id": "RPL-001",
+            "name": "Flood Scenario Replay",
+            "steps": [
+                "Signal",
+                "Telemetry",
+                "Incident",
+                "Escalation",
+                "Replay",
+                "Evidence"
+            ]
+        }
+    ]
+}

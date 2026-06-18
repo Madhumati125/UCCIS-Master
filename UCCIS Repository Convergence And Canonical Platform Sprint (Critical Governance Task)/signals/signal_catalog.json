@@ -1,0 +1,28 @@
+{
+    "signals": [
+        {
+            "id": "SIG-001",
+            "name": "Flood Alert",
+            "category": "Weather",
+            "severity": "CRITICAL",
+            "source": "Water Sensor",
+            "status": "ACTIVE"
+        },
+        {
+            "id": "SIG-002",
+            "name": "Traffic Congestion",
+            "category": "Traffic",
+            "severity": "HIGH",
+            "source": "Traffic Camera",
+            "status": "ACTIVE"
+        },
+        {
+            "id": "SIG-003",
+            "name": "Power Failure",
+            "category": "Utility",
+            "severity": "MEDIUM",
+            "source": "Power Grid",
+            "status": "ACTIVE"
+        }
+    ]
+}

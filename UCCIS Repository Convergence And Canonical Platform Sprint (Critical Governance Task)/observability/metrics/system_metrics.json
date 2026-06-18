@@ -1,0 +1,13 @@
+{
+    "systemMetrics": {
+        "cpuUsage": "68%",
+        "memoryUsage": "74%",
+        "diskUsage": "52%",
+        "networkLatency": "95ms",
+        "apiResponseTime": "120ms",
+        "runtimeHealth": "HEALTHY",
+        "activeTraceIds": 24,
+        "activeIncidents": 6,
+        "activeSignals": 12
+    }
+}

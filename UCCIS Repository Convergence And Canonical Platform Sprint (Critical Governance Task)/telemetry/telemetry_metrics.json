@@ -1,0 +1,19 @@
+{
+    "metrics": [
+        {
+            "metric": "CPU Usage",
+            "unit": "%",
+            "threshold": 80
+        },
+        {
+            "metric": "Memory Usage",
+            "unit": "%",
+            "threshold": 75
+        },
+        {
+            "metric": "Network Latency",
+            "unit": "ms",
+            "threshold": 100
+        }
+    ]
+}

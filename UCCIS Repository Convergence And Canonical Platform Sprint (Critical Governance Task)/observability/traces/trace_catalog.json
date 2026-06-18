@@ -1,0 +1,16 @@
+{
+    "traces": [
+        {
+            "traceId": "TRACE-1001",
+            "status": "SUCCESS",
+            "layers": [
+                "Signal",
+                "Telemetry",
+                "Incident",
+                "Escalation",
+                "Replay",
+                "Evidence"
+            ]
+        }
+    ]
+}
