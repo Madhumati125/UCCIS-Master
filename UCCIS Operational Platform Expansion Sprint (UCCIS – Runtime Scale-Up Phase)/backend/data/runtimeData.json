@@ -1,0 +1,68 @@
+{
+    "signals": [
+        {
+            "id": "SIG-1001",
+            "traceId": "TRACE-1001",
+            "domain": "Flood",
+            "source": "IoT Sensor",
+            "status": "Active",
+            "severity": "Critical",
+            "createdAt": "2026-06-17T09:00:00Z",
+            "updatedAt": "2026-06-17T09:30:00Z"
+        },
+        {
+            "id": "SIG-1002",
+            "traceId": "TRACE-1002",
+            "domain": "Traffic",
+            "source": "Camera",
+            "status": "Resolved",
+            "severity": "Medium",
+            "createdAt": "2026-06-17T10:00:00Z",
+            "updatedAt": "2026-06-17T10:45:00Z"
+        }
+    ],
+    "incidents": [
+        {
+            "id": "INC-1001",
+            "traceId": "TRACE-1001",
+            "signalId": "SIG-1001",
+            "type": "Flood Alert",
+            "severity": "Critical",
+            "status": "Open",
+            "createdAt": "2026-06-17T09:05:00Z",
+            "updatedAt": "2026-06-17T09:40:00Z"
+        }
+    ],
+    "escalations": [
+        {
+            "id": "ESC-1001",
+            "traceId": "TRACE-1001",
+            "incidentId": "INC-1001",
+            "level": "L2",
+            "assignedTo": "Operations Team",
+            "status": "Open",
+            "createdAt": "2026-06-17T09:10:00Z",
+            "updatedAt": "2026-06-17T09:50:00Z"
+        }
+    ],
+    "replays": [
+        {
+            "id": "REP-1001",
+            "traceId": "TRACE-1001",
+            "replayType": "Incident Replay",
+            "status": "Completed",
+            "replayTime": "120s",
+            "createdAt": "2026-06-17T11:00:00Z"
+        }
+    ],
+    "evidence": [
+        {
+            "id": "EVD-1001",
+            "traceId": "TRACE-1001",
+            "source": "Sensor",
+            "reference": "sensor-log-001",
+            "description": "Water level crossed threshold",
+            "createdAt": "2026-06-17T09:02:00Z"
+        }
+    ]
+}
