@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: uccis-frontend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: uccis-frontend
+
+  template:
+    metadata:
+      labels:
+        app: uccis-frontend
+
+    spec:
+      containers:
+        - name: frontend
+
+          image: uccis/frontend:latest
+
+          ports:
+            - containerPort: 5173

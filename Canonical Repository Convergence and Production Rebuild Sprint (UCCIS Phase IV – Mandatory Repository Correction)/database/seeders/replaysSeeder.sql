@@ -1,0 +1,20 @@
+INSERT INTO replays
+(
+replay_id,
+trace_id,
+status,
+execution_time
+)
+VALUES
+(
+'REP-1001',
+'TRACE-1001',
+'Completed',
+125
+),
+(
+'REP-1002',
+'TRACE-1002',
+'Completed',
+310
+);

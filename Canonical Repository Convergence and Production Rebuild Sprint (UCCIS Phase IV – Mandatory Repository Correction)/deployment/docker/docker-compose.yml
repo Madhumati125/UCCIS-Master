@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build:
+      context: ../../backend
+      dockerfile: ../deployment/docker/Dockerfile.backend
+
+    container_name: uccis-backend
+
+    ports:
+      - "5000:5000"
+
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongo:27017/uccis
+
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ../../frontend
+      dockerfile: ../deployment/docker/Dockerfile.frontend
+
+    container_name: uccis-frontend
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo:7
+
+    container_name: uccis-mongo
+
+    restart: always
+
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

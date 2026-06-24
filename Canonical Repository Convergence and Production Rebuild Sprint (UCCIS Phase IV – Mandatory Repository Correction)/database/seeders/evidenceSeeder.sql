@@ -1,0 +1,23 @@
+INSERT INTO evidence
+(
+evidence_id,
+trace_id,
+file_name,
+evidence_type,
+uploaded_by
+)
+VALUES
+(
+'EVD-1001',
+'TRACE-1001',
+'error-log.txt',
+'Log',
+'Admin'
+),
+(
+'EVD-1002',
+'TRACE-1002',
+'screenshot.png',
+'Image',
+'Operator'
+);
