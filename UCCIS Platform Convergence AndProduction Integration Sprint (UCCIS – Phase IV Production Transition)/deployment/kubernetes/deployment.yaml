@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: uccis-runtime
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: uccis
+
+  template:
+    metadata:
+      labels:
+        app: uccis
+
+    spec:
+      containers:
+        - name: uccis
+
+          image: uccis-runtime:latest
+
+          ports:
+            - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: uccis-service
+
+spec:
+  selector:
+    app: uccis
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+
+  type: LoadBalancer
