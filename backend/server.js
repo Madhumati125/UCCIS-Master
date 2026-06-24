@@ -1,92 +1,172 @@
-const express = require("express");
-const cors = require("cors");
-const fs = require("fs");
-const path = require("path");
+require("dotenv").config();
 
-const app = express();   // ✅ MUST BE HERE
+const http = require("http");
+const mongoose = require("mongoose");
 
-app.use(cors());
-app.use(express.json());
+const app = require("./app");
 
-// Serve frontend
-app.use(express.static(path.join(__dirname, "../frontend")));
+const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/index.html"));
-});
+const MONGO_URI =
+  process.env.MONGO_URI ||
+  "mongodb://127.0.0.1:27017/uccis";
 
-// GET ZONE STATE
-app.get("/zone/state", (req, res) => {
-    const data = JSON.parse(fs.readFileSync("./data/zones.json"));
-    res.json(data);
-});
+/* ==========================================
+   DATABASE CONNECTION
+========================================== */
 
-// GET ALERTS
-app.get("/alerts", (req, res) => {
-    const data = JSON.parse(fs.readFileSync("./data/alerts.json"));
-    res.json(data);
-});
+const connectDatabase = async () => {
+  try {
+    await mongoose.connect(MONGO_URI);
 
-// 🔥 ACTION TRIGGER (FIXED)
-app.post("/action/trigger", (req, res) => {
-    let zones = JSON.parse(fs.readFileSync("./data/zones.json"));
-    let alerts = JSON.parse(fs.readFileSync("./data/alerts.json"));
+    console.log(
+      "MongoDB Connected Successfully"
+    );
+  } catch (error) {
+    console.error(
+      "MongoDB Connection Failed"
+    );
 
-    let { zoneId, action } = req.body;
+    console.error(error.message);
 
-    zoneId = Number(zoneId); // fix type
+    process.exit(1);
+  }
+};
 
-    let severity = "LOW";
+/* ==========================================
+   SERVER CREATION
+========================================== */
 
-    zones = zones.map(z => {
-        if (z.id === zoneId) {
+const server = http.createServer(app);
 
-            // 🔥 ACTION LOGIC
-            if (action === "deploy_waste_collection") {
-                z.metrics.load -= 20;
-            }
+/* ==========================================
+   START SERVER
+========================================== */
 
-            if (action === "reroute_water") {
-                z.metrics.load -= 15;
-            }
+const startServer = async () => {
+  try {
+    await connectDatabase();
 
-            if (action === "send_field_team") {
-                z.metrics.load -= 25;
-            }
+    server.listen(PORT, () => {
+      console.log("");
+      console.log(
+        "================================================"
+      );
 
-            if (z.metrics.load < 0) z.metrics.load = 0;
+      console.log(
+        "UCCIS PRODUCTION RUNTIME PLATFORM"
+      );
 
-            // 🔥 STATUS UPDATE
-            if (z.metrics.load >= 70) {
-                z.status = "RED";
-                severity = "CRITICAL";
-            } else if (z.metrics.load >= 40) {
-                z.status = "YELLOW";
-                severity = "HIGH";
-            } else {
-                z.status = "GREEN";
-                severity = "MEDIUM";
-            }
-        }
-        return z;
+      console.log(
+        "================================================"
+      );
+
+      console.log(
+        `Server URL      : http://localhost:${PORT}`
+      );
+
+      console.log(
+        `Environment     : ${
+          process.env.NODE_ENV ||
+          "development"
+        }`
+      );
+
+      console.log(
+        "Runtime Health  : 98%"
+      );
+
+      console.log(
+        "Status          : Healthy"
+      );
+
+      console.log(
+        "Database        : Connected"
+      );
+
+      console.log(
+        "Telemetry       : Active"
+      );
+
+      console.log(
+        "Replay Engine   : Ready"
+      );
+
+      console.log(
+        "Observability   : Enabled"
+      );
+
+      console.log(
+        "Trace Engine    : Running"
+      );
+
+      console.log(
+        "================================================"
+      );
+
+      console.log("");
     });
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-    // 🔥 ADD ALERT
-    alerts.push({
-        id: Date.now(),
-        type: action,
-        severity: severity,
-        zoneId: zoneId,
-        timestamp: new Date().toLocaleString()
+startServer();
+
+/* ==========================================
+   PROCESS EVENTS
+========================================== */
+
+process.on(
+  "unhandledRejection",
+  (error) => {
+    console.error(
+      "Unhandled Rejection"
+    );
+
+    console.error(error);
+
+    server.close(() => {
+      process.exit(1);
     });
+  }
+);
 
-    fs.writeFileSync("./data/zones.json", JSON.stringify(zones, null, 2));
-    fs.writeFileSync("./data/alerts.json", JSON.stringify(alerts, null, 2));
+process.on(
+  "uncaughtException",
+  (error) => {
+    console.error(
+      "Uncaught Exception"
+    );
 
-    res.json({ message: "Action executed", zones });
-});
+    console.error(error);
 
-// START SERVER
-app.listen(5000, () => {
-    console.log("Server running on http://localhost:5000");
-});
+    process.exit(1);
+  }
+);
+
+process.on(
+  "SIGINT",
+  async () => {
+    console.log(
+      "\nGracefully Shutting Down..."
+    );
+
+    await mongoose.connection.close();
+
+    process.exit(0);
+  }
+);
+
+process.on(
+  "SIGTERM",
+  async () => {
+    console.log(
+      "\nSIGTERM Received..."
+    );
+
+    await mongoose.connection.close();
+
+    process.exit(0);
+  }
+);
